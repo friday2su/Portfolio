@@ -2,7 +2,7 @@
 
 A premium, interactive portfolio website built for a Full Stack Developer & Web Designer. This project showcases a modern, dark-themed aesthetic with immersive 3D elements, smooth animations, and a focus on user experience.
 
-![Portfolio Preview](https://i.ibb.co/dw368Gjy/image.png)
+![Portfolio Preview](public/image.png)
 
 ## ✨ Key Features
 
