@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0a0a0a;
+  --text-primary: #e8e8e8;
+  --text-secondary: #9ca3af;
+  --accent-primary: #ef4444;
+  --accent-secondary: #fca5a5;
+  --border-color: #1f2937;
+  --card-bg: #111827;
+
+  /* Smooth Scroll */
+  --lenis-duration: 1.2s;
+  --lenis-easing: cubic-bezier(0.25, 0.00, 0.35, 1.00);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-fira), monospace;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Utilities */
+.text-accent {
+  color: var(--accent-primary);
+}
+
+.border-accent {
+  border-color: var(--accent-primary);
+}
+
+/* 3D Text Effect */
+.text-3d {
+  text-shadow:
+    0 1px 0 #2a2a2a,
+    0 2px 0 #242424,
+    0 3px 0 #1e1e1e,
+    0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Card with subtle depth */
+.card-depth {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card-depth:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Button with 3D effect */
+.btn-3d {
+  background: var(--accent-primary);
+  color: white;
+  box-shadow:
+    0 4px 0 #b91c1c,
+    0 6px 12px rgba(239, 68, 68, 0.3);
+  transform: translateY(0);
+  transition: all 0.2s ease;
+}
+
+.btn-3d:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 0 #b91c1c,
+    0 8px 16px rgba(239, 68, 68, 0.4);
+}
+
+.btn-3d:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 2px 0 #b91c1c,
+    0 4px 8px rgba(239, 68, 68, 0.2);
+}
+
+/* Custom Cursor */
+* {
+  cursor: none;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ef4444;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: #ef4444;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.cursor.hover {
+  width: 40px;
+  height: 40px;
+  background: rgba(239, 68, 68, 0.1);
+}
